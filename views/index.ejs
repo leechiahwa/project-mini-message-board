@@ -16,8 +16,8 @@
     <ul>
         <% messages.forEach(function(message) { %>
             <li>
-                <%= message.user %>: <%= message.text %>
-                        <%= message.added.toLocaleString() %>
+                <%= message.username %>: <%= message.message %>
+                        <%= message.date.toLocaleString() %>
             </li>
             <a href="/message/<%= message.id %>">Open</a>
             <%}) %>
