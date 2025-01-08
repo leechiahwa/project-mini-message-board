@@ -9,16 +9,18 @@
 
 <body>
     <h1>Message Details</h1>
-    <p><strong>Author:</strong>
-        <%= message.user %>
-    </p>
-    <p><strong>Text:</strong>
-        <%= message.text %>
-    </p>
-    <p><strong>Added:</strong>
-        <%= message.added.toLocaleString() %>
-    </p>
-    <a href="/">Back to Messages</a>
+    <% messages.forEach(function(message) { %>
+        <p><strong>Author:</strong>
+            <%= message.username %>
+        </p>
+        <p><strong>Text:</strong>
+            <%= message.message %>
+        </p>
+        <p><strong>Added:</strong>
+            <%= message.date.toLocaleString()%>
+        </p>
+        <%}) %>
+            <a href="/">Back to Messages</a>
 </body>
 
 </html>

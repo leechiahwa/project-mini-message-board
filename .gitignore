@@ -1,2 +1,5 @@
 /node_modules/
 .env
+
+# First time run script for db
+populatedb.js
